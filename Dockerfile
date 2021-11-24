@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 FROM centos:7 as builder0
 
 RUN yum install -y pigz yum-utils createrepo unzip epel-release && \
