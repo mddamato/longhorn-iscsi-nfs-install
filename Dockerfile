@@ -31,8 +31,8 @@ RUN dnf install -y epel-release yum-utils createrepo && \
 
 FROM alpine:3.12
 
-COPY --from=builder0 /lh-rpm-el7 /lh-rpm-el7
-COPY --from=builder1 /lh-rpm-el8 /lh-rpm-el8
+COPY --from=builder0 /lh-rpm-el7 /longhorn-iscsi-nfs-install/lh-rpm-el7
+COPY --from=builder1 /lh-rpm-el8 /longhorn-iscsi-nfs-install/lh-rpm-el8
 COPY --chmod=0777 entrypoint.sh entrypoint.sh
 
 ENTRYPOINT [ "/bin/sh", "-c" ]
